@@ -1,13 +1,14 @@
-# > 托管文件长久地址:https://512github.com/Somethingir/Remote/blob/main/Surge
-
+# > 托管文件长久地址：https://521github.com/Somethingir/Remote/raw/main/Surge
+ 
 # >图标备用：📮✉️📪📬💫💬💥🔨🥼🚫🔰🙈🍎🎬📺🎱🍐🐝🦁💡🌵🐯🎸💻📽🌏🕹📡🦑🌟🐷🦒🐳🚦📵🎧💊🔓🚦🚥🐼⛔️🈲🌐🎯🖲️🐦🔞🎵📱🚀💳♻️🙈🍱🔂📦🔀⏱ 🔜🛫📶🔜📶🛫☠️👽👣👉🥷🧞‍♀️🧚‍♀️🙅🙅‍♂️🤳🪡⛑💍🧢🐍🪲🐞🐠🦜🎄🪐🌎🌍🌏❄️🍱🍭🍡🍩🧃🍶⛳️🪁🏹🎣🏂🪂⛷🥇🥈🥉🏅🎖🎮🎲🏍✈️🛫🛬🛩🛰🚀🛸⚓️🚦🗼🏝🎡📱📲💻⌨️🖥🕹💾💿📀🎥📟🧭⌛️⏳📡🪫💰💳🪪💎⚖️🛠🔨⚙️⛓🛡🚬💈🔭🔬💉🩸🧬🦠📩💌📥📤📌📍🔗🔐🔒🔓❤️‍🩹💘💞💕❣️💓💗🩷❤️🧡💛💚🩵💙💜🖤🩶🤍🤎💔💝💘💟☮️✝️☪️🕉☸️🪯✡️🔯🕎☯️☦️🛐⛎♈️♉️♊️♋️♌️♍️♎️♏️♐️♑️♒️♓️🆔⚛️☢️☣️📴📳🉑🈶🈚️🈸🈺🈷️✴️🆚💮🉐㊙️㊗️🈴🈵🈹🈲🅰️🅱️🆎🆑🅾️🆘❌⭕️🛑⛔️📛🚫💯💢♨️🚷🚯🚳🚱🔞📵🚭❗️❓‼️⁉️〽️⚠️🚸🔱⚜️🔰♻️✅🈯️💹❇️✳️❎🌐💠Ⓜ️🌀💤🏧🚾♿️🅿️🛗🈳🈂️🛂🛃🛄🛅🛜🚹🚺🚼⚧🚻🚮🎦📶🈁🔣ℹ️🔤🔡🔠🆖🆗🆙🆒🆕🆓0️⃣1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣🔟🔢#️⃣*️⃣⏏️▶️⏸⏯⏹⏺⏭⏮⏩⏪⏫⏬◀️🔼🔽➡️⬅️⬆️⬇️↗️↘️↙️↖️↕️↔️↪️↩️⤴️⤵️🔀🔁🔂🔄🔃🎵🎶➕➖➗✖️🟰♾™️©️®️🔚🔙🔛🔝🔜➿🔔🔕📣💬🀄️
 
 [General]
+# > 配置托管
+#!MANAGED-CONFIG https://521github.com/Somethingir/Remote/raw/main/Surge interval=60 strict=false
 
 # > 日志级别:warning, notify, info, verbose (默认值: notify) 
 loglevel = notify
 
-bypass-system = true
 
 # > 拒绝显示错误页面
 show-error-page-for-reject = true
@@ -47,8 +48,7 @@ hijack-dns = 8.8.8.8:53, 8.8.4.4:53
 read-etc-hosts = true
 
 # > 远程控制器
-http-api-web-dashboard = true
-exclude-simple-hostnames = true
+http-api-web-dashboard = false
 use-default-policy-if-wifi-not-primary = false
 
 # > 跳过代理
@@ -93,14 +93,12 @@ keyword-filter-type = false
 [Script]
 # 显示运行时间及MitM等功能开关状态
 EDC_Surge-Panel = type=generic,script-path=https://521github.com/extdomains/raw.githubusercontent.com/erdongchanyo/Rules/main/Surge/Panels/EDC_Surge-Panel.js,argument=icon=crown.fill&color=#f6c970
-# 不知道什么用先加起来测试
-http-request https?:\/\/.*\.iqiyi\.com\/.*authcookie= script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
-
+ 
 [Proxy Group]
 # > 外部订阅链接
 # > hidden=1 或者 hidden=true 隐藏该策略组
-机 场 1 = select,policy-path=https://tt.vg/Node, hidden=1
-机 场 2 = select,policy-path=https://tt.vg/IMP, hidden=1
+机场1 = select,policy-path=https://tt.vg/Node, hidden=1
+机场2 = select,policy-path=https://tt.vg/IMP, hidden=1
 机场合并 = url-test,include-other-group="机场1,机场2", hidden=1
 
 # > 配置选择文件
