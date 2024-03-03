@@ -1,3 +1,15 @@
+###############################
+# 创建者:Poison                            
+# 客户端: Surge                         
+# 创建日期:2024-03-03 10:10:01                         
+# 节点数量:52                        
+###############################
+
+# > 2024-03-03      第一次配置    暂未进行深入修改；后期将加入更多规则及脚本；
+
+
+
+
 # > 托管文件长久地址：https://521github.com/Somethingir/Remote/raw/main/Surge
  
 # >图标备用：📮✉️📪📬💫💬💥🔨🥼🚫🔰🙈🍎🎬📺🎱🍐🐝🦁💡🌵🐯🎸💻📽🌏🕹📡🦑🌟🐷🦒🐳🚦📵🎧💊🔓🚦🚥🐼⛔️🈲🌐🎯🖲️🐦🔞🎵📱🚀💳♻️🙈🍱🔂📦🔀⏱ 🔜🛫📶🔜📶🛫☠️👽👣👉🥷🧞‍♀️🧚‍♀️🙅🙅‍♂️🤳🪡⛑💍🧢🐍🪲🐞🐠🦜🎄🪐🌎🌍🌏❄️🍱🍭🍡🍩🧃🍶⛳️🪁🏹🎣🏂🪂⛷🥇🥈🥉🏅🎖🎮🎲🏍✈️🛫🛬🛩🛰🚀🛸⚓️🚦🗼🏝🎡📱📲💻⌨️🖥🕹💾💿📀🎥📟🧭⌛️⏳📡🪫💰💳🪪💎⚖️🛠🔨⚙️⛓🛡🚬💈🔭🔬💉🩸🧬🦠📩💌📥📤📌📍🔗🔐🔒🔓❤️‍🩹💘💞💕❣️💓💗🩷❤️🧡💛💚🩵💙💜🖤🩶🤍🤎💔💝💘💟☮️✝️☪️🕉☸️🪯✡️🔯🕎☯️☦️🛐⛎♈️♉️♊️♋️♌️♍️♎️♏️♐️♑️♒️♓️🆔⚛️☢️☣️📴📳🉑🈶🈚️🈸🈺🈷️✴️🆚💮🉐㊙️㊗️🈴🈵🈹🈲🅰️🅱️🆎🆑🅾️🆘❌⭕️🛑⛔️📛🚫💯💢♨️🚷🚯🚳🚱🔞📵🚭❗️❓‼️⁉️〽️⚠️🚸🔱⚜️🔰♻️✅🈯️💹❇️✳️❎🌐💠Ⓜ️🌀💤🏧🚾♿️🅿️🛗🈳🈂️🛂🛃🛄🛅🛜🚹🚺🚼⚧🚻🚮🎦📶🈁🔣ℹ️🔤🔡🔠🆖🆗🆙🆒🆕🆓0️⃣1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣🔟🔢#️⃣*️⃣⏏️▶️⏸⏯⏹⏺⏭⏮⏩⏪⏫⏬◀️🔼🔽➡️⬅️⬆️⬇️↗️↘️↙️↖️↕️↔️↪️↩️⤴️⤵️🔀🔁🔂🔄🔃🎵🎶➕➖➗✖️🟰♾™️©️®️🔚🔙🔛🔝🔜➿🔔🔕📣💬🀄️
@@ -99,12 +111,16 @@ EDC_Surge-Panel = type=generic,script-path=https://521github.com/extdomains/raw.
 # > hidden=1 或者 hidden=true 隐藏该策略组
 机场1 = select,policy-path=https://tt.vg/Node, hidden=1
 机场2 = select,policy-path=https://tt.vg/IMP, hidden=1
+# >此处可添加更多机场订阅链接
+# > 机场3 =select,policy-path=XXXXXXXXXX, hidden=1
+# > 机场4 =select,policy-path=XXXXXXXXXX, hidden=1
+
 机场合并 = url-test,include-other-group="机场1,机场2", hidden=1
 
 # > 配置选择文件
 🛫 节点选择 = select, ☯️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 📶 手动切换, DIRECT
-📶 手动切换 = select, include-other-group="机场1,机场2"
-☯️ 自动选择 = url-test, include-other-group="机场1,机场2", url=http://www.gstatic.com/generate_204, interval=300, tolerance=50
+📶 手动切换 = select, include-other-group="机场合并", url=http://www.gstatic.com/generate_204, interval=300, tolerance=50
+☯️ 自动选择 = url-test, include-other-group="机场合并", url=http://www.gstatic.com/generate_204, interval=300, tolerance=50
 📲 电报消息 = select, 🛫 节点选择, ☯️ 自动选择, 🇸🇬 狮城节点, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 📶 手动切换, DIRECT
 🎧 OpenAi = select, 🛫 节点选择, ☯️ 自动选择, 🇸🇬 狮城节点, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 📶 手动切换, DIRECT
 🎞 油管视频 = select, 🛫 节点选择, ☯️ 自动选择, 🇸🇬 狮城节点, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 📶 手动切换, DIRECT
@@ -126,13 +142,13 @@ EDC_Surge-Panel = type=generic,script-path=https://521github.com/extdomains/raw.
 
 # > 外部节点自动匹配
 # > 匹配到关键字，自动收纳为节点组
-🇭🇰 香港节点 = url-test, include-other-group="机场1,机场2", policy-regex-filter=(🇭🇰)|(港)|(Hong)|(HK), url=http://www.gstatic.com/generate_204, interval=300, tolerance=150
-🇨🇳 台湾节点 = url-test, include-other-group="机场1,机场2", policy-regex-filter=(🇨🇳)|(台)|(Tai)|(TW), url=http://www.gstatic.com/generate_204, interval=300, tolerance=150
-🇺🇲 美国节点 = url-test, include-other-group="机场1,机场2", policy-regex-filter=(🇺🇸)|(美)|(States)|(US), url=http://www.gstatic.com/generate_204, interval=300, tolerance=150
-🇯🇵 日本节点 = url-test, include-other-group="机场1,机场2", policy-regex-filter=(🇯🇵)|(日)|(Japan)|(JP), url=http://www.gstatic.com/generate_204, interval=300, tolerance=150
-🇸🇬 狮城节点 = url-test, include-other-group="机场1,机场2", policy-regex-filter=(🇸🇬)|(新)|(Singapore)|(SG), url=http://www.gstatic.com/generate_204, interval=300, tolerance=150
-🇰🇷 韩国节点 = url-test, include-other-group="机场1,机场2", policy-regex-filter=(🇰🇷)|(韩)|(Korea)|(KR), url=http://www.gstatic.com/generate_204, interval=300, tolerance=150
-🎥 奈飞节点 = select, include-other-group="机场1,机场2", policy-regex-filter=(NF)|(奈飞)|(Netflix)|(video)|(Video)|(nf), url=http://www.gstatic.com/generate_204, interval=300, tolerance=150
+🇭🇰 香港节点 = url-test, include-other-group="机场合并", policy-regex-filter=(🇭🇰)|(港)|(Hong)|(HK), url=http://www.gstatic.com/generate_204, interval=300, tolerance=150
+🇨🇳 台湾节点 = url-test, include-other-group="机场合并", policy-regex-filter=(🇨🇳)|(台)|(Tai)|(TW), url=http://www.gstatic.com/generate_204, interval=300, tolerance=150
+🇺🇲 美国节点 = url-test, include-other-group="机场合并", policy-regex-filter=(🇺🇸)|(美)|(States)|(US), url=http://www.gstatic.com/generate_204, interval=300, tolerance=150
+🇯🇵 日本节点 = url-test, include-other-group="机场合并", policy-regex-filter=(🇯🇵)|(日)|(Japan)|(JP), url=http://www.gstatic.com/generate_204, interval=300, tolerance=150
+🇸🇬 狮城节点 = url-test, include-other-group="机场合并", policy-regex-filter=(🇸🇬)|(新)|(Singapore)|(SG), url=http://www.gstatic.com/generate_204, interval=300, tolerance=150
+🇰🇷 韩国节点 = url-test, include-other-group="机场合并", policy-regex-filter=(🇰🇷)|(韩)|(Korea)|(KR), url=http://www.gstatic.com/generate_204, interval=300, tolerance=150
+🎥 奈飞节点 = select, include-other-group="机场合并", policy-regex-filter=(NF)|(奈飞)|(Netflix)|(video)|(Video)|(nf), url=http://www.gstatic.com/generate_204, interval=300, tolerance=150
  
 [Rule]
 RULE-SET,https://521github.com/extdomains/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list,⚖️ 全球直连,update-interval=86400
